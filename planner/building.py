@@ -26,6 +26,8 @@ class Building:
     def purchase(self, buyer):
         self.owner = buyer
 
+    def print_report(self):
+        print(f'{self.address} was purchased by {self.owner} on {self.date_constructed} and has {self.stories} stories.')
 '''
 Create 5 building instances
 Have each one get purchased by a real estate magnate
@@ -35,32 +37,7 @@ print the address, owner, stories, and
 date constructed to the terminal for each one.
 800 8th Street was purchased by Bob Builder on 03/14/2018 and has 12 stories.
 '''
-def print_report(building):
-    print(f'{building.address} was purchased by {building.owner} on {building.date_constructed} and has {building.stories} stories.')
 
-building_one = Building("205 N. 5th St.", 3)
-building_one.purchase("Mike")
-building_one.construct()
-print_report(building_one)
 
-building_two = Building("820 N. 2nd St.", 7)
-building_two.purchase("Karen")
-building_two.construct()
-print_report(building_two)
-
-building_three = Building("300 N. Lincoln", 12)
-building_three.purchase("Mike")
-building_three.construct()
-print_report(building_three)
-
-building_four = Building("1143 W. Lawrence Ave.", 2)
-building_four.purchase("Jim")
-building_four.construct()
-print_report(building_four)
-
-building_five = Building("12 Capital Ave.", 30)
-building_five.purchase("Jim")
-building_five.construct()
-print_report(building_five)
 
 # print(building_one.date_constructed)
